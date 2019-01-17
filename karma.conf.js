@@ -13,6 +13,7 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-typescript'),
+      require('karma-typescript-es6-transform'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
