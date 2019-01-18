@@ -14,6 +14,8 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-typescript'),
       require('karma-typescript-es6-transform'),
+      require('karma-html-reporter'),
+      require('karma-spec-reporter'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
@@ -45,7 +47,9 @@ module.exports = function (config) {
 
       },
       compilerOptions: {
-        lib: ['ES2015', 'DOM']
+        lib: ['ES2015', 'DOM'],
+        module: 'commonjs',
+        tsconfig: './tsconfig.json'
       }
     },
     customLaunchers: {
@@ -59,7 +63,7 @@ module.exports = function (config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'spec', 'karma-typescript'],
 
 
     // web server port
