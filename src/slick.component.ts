@@ -19,9 +19,7 @@ import {
     SimpleChanges
 } from '@angular/core';
 import {NG_VALUE_ACCESSOR} from '@angular/forms';
-import jQuery from 'jquery';
-
-declare const jQuery: any;
+import * as jQuery from 'jquery';
 
 /**
  * Slick component
